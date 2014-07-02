@@ -1,0 +1,32 @@
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = true
+[push]
+	default = current
+[merge]
+	tool = meld
+[alias]
+	sfe = !git sube foreach
+	sfer = !git sfe -r
+	tsfe = !git sfe -t
+	tsfep = !git sfe -t -p
+	tsfer = !git sfe -t -r
+	tsferp = !git sfe -t -r -p
+	s = status -s
+	st = status -sb
+	acommit = !git add -A && git commit -m
+	branch-get = rev-parse --abbrev-ref HEAD
+	bg = rev-parse --abbrev-ref HEAD
+	root = !pwd -P
+	conflicts = !git ls-files -u | cut -f 2 | sort -u
+	sube = !git-submodule-ext
+	sub = submodule
+	permission-reset = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
+[diff]
+	tool = meld
+	ignoreSubmodules = dirty
+[fetch]
+	recurseSubmodules = false

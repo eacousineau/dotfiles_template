@@ -1,0 +1,4 @@
+# Should try: https://github.com/jonas/tig/issues/26
+set refresh-mode = after-command
+bind main <F2> +bash -c 'git tag -f tig-a %(commit); echo "Tag 'tig-a': %(commit)"'
+bind main <F3> +bash -c 'git tag -f tig-b %(commit); echo "Tag 'tig-b': %(commit)"'

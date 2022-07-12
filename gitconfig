@@ -6,8 +6,6 @@
 	ui = true
 [push]
 	default = current
-[merge]
-	tool = meld
 [alias]
 	sfe = !git sube foreach
 	sfer = !git sfe -r
@@ -18,6 +16,7 @@
 	s = status -s
 	st = status -sb
 	acommit = !git add -A && git commit -m
+	ref = rev-parse --short HEAD
 	branch-get = rev-parse --abbrev-ref HEAD
 	bg = rev-parse --abbrev-ref HEAD
 	root = !pwd -P
@@ -28,5 +27,13 @@
 [diff]
 	tool = meld
 	ignoreSubmodules = dirty
+	colorMoved = zebra
+[merge]
+	conflictstyle = merge
+	tool = meld
 [fetch]
 	recurseSubmodules = false
+[rerere]
+	enabled = 1
+[gui]
+	gcwarning = false

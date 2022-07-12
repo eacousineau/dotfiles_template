@@ -1,0 +1,16 @@
+# .bazelrc options. For more information, please see:
+# https://docs.bazel.build/versions/master/guide.html#bazelrc
+# https://docs.bazel.build/versions/master/user-manual.html
+
+build -j HOST_CPUS*0.5
+
+# N.B. Do not use 'common' for these flags since it will break commands like
+# 'bazel version'.
+fetch --repository_cache /home/eacousineau/.cache/bazel_externals
+fetch --disk_cache /home/eacousineau/.cache/bazel_local_disk
+build --repository_cache /home/eacousineau/.cache/bazel_externals
+build --disk_cache /home/eacousineau/.cache/bazel_local_disk
+
+build --progress_report_interval=5
+# Have GCC show color output. May invalidate prior builds.
+build --cxxopt -fdiagnostics-color

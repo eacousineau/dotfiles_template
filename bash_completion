@@ -1,3 +1,4 @@
 #!/bin/bash
 
-source ~/devel/git/git-util/git-sube
+source ~/.bash/git-util/git-sube
+

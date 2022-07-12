@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=nm-applet
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=nm-applet
+Name=nm-applet
+Comment[en_US]=For easier network management
+Comment=For easier network management
